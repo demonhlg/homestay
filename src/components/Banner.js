@@ -11,7 +11,7 @@ const Banner = ({ bannerList, loading, keyName }) => {
     );
   }
   return (
-    <div className={styles.carouselLayout}>
+    <div className={styles.carouselLayout}  onClick={() => onLink({item.description})}>
       <Carousel
         className={styles.carousel}
         autoplay={bannerList && bannerList.length > 1}
@@ -20,7 +20,7 @@ const Banner = ({ bannerList, loading, keyName }) => {
         {
           bannerList && bannerList.length > 0 ?
             bannerList.map(item =>
-              <a key={`${keyName}-${item.id}`}>
+              <a key={`${keyName}-${item.id}`} href={item.description}>
                 <img src={item.path} alt={item.description} title={item.title} />
               </a>
             ) :
