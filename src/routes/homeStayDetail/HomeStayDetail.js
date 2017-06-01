@@ -62,6 +62,7 @@ const HomeStayDetail = ({ info, album, house, loading }) => {
                       <div className={styles.price}>
                         价格：<b>{item.price ? item.price : '暂无数据'}</b>
                       </div>
+                      <div>{item.description?item.description:''}</div>
                     </div>
                   );
                 }) : '无数据'
